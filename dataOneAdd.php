@@ -17,9 +17,6 @@
 <div>
     <form action="dataOneAddPost.php" method="post">
 
-        <lable for="basketID" class="form-lable"> Basket ID </lable>
-        <input type="text" name="basketID" aria-describedby="Basket ID">
-
         <lable for="basketOwnerName" class="form-lable"> Name </lable>
         <input type="text" name="basketOwnerName" aria-describedby="Your Name">
 

@@ -31,15 +31,14 @@
         }
 
         // GET & POST 
-        $id = $_GET['basketID'];
         $name = $_GET['basketOwnerName'];
         $food = $_GET['basketFoodId'];
         $drink = $_GET['basketDrinkId'];
 
         // prepare and bind                                           
-        $stmt = $conn->prepare("INSERT INTO Basket (basketID, basketOwnerName, basketFoodId, basketDrinkId) VALUES (?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO Basket (basketOwnerName, basketFoodId, basketDrinkId) VALUES (?, ?, ?)");
 
-        $stmt->bind_param("isii", $id, $name, $food, $drink)
+        $stmt->bind_param("sii", $name, $food, $drink)
 
         // intiger string string var 1 var 2 var 3
 
