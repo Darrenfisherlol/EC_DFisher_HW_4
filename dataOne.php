@@ -46,7 +46,6 @@
             if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
             }
-            $iid = $_GET['ProfessorID'];
             //echo $iid;
 
             $sql = "select basketID, basketOwnerName, basketFoodId, basketDrinkId from Basket";
