@@ -31,22 +31,24 @@
         }
 
         // GET & POST 
-        $name = $_GET['basketOwnerName'];
-        $food = $_GET['basketFoodId'];
-        $drink = $_GET['basketDrinkId'];
+        $name = $_POST['basketOwnerName'];
+        $food = $_POST['basketFoodId'];
+        $drink = $_POST['basketDrinkId'];
 
-        // prepare and bind                                           
+        // prepare and bind
         $sql = "INSERT INTO Basket (basketOwnerName, basketFoodId, basketDrinkId) VALUES (?, ?, ?)";
 
         $saveSql = $conn->prepare($sql);
 
         $saveSql->bind_param("sii", $name, $food, $drink);
+
         $saveSql->execute();
+
         $saveSql->close();
         ?>
 
 
-    <a href="professorAll" class="btn btn-primary"> Back to Professor table</a>
+    <a href="dataOne.php" class="btn btn-primary"> Back to basket table</a>
 
 </div>
 
