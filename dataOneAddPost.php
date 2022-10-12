@@ -36,17 +36,15 @@
         $drink = $_GET['basketDrinkId'];
 
         // prepare and bind                                           
-        $stmt = $conn->prepare("INSERT INTO Basket (basketOwnerName, basketFoodId, basketDrinkId) VALUES (?, ?, ?)");
+        $sql = "INSERT INTO Basket (basketOwnerName, basketFoodId, basketDrinkId) VALUES (?, ?, ?)");
 
-        $stmt->bind_param("sii", $name, $food, $drink)
+        $saveSql = $conn->prepare($sql);
 
-        // intiger string string var 1 var 2 var 3
-
-        $stmt->execute();
-
-        // close database
-        $stmt->close();
+        $saveSql->bind_param("sii", $name, $food, $drink)
+        $saveSql->execute();
+        $saveSql->close();
         ?>
+
 
     <a href="professorAll" class="btn btn-primary"> Back to Professor table</a>
 
