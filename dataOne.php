@@ -63,13 +63,33 @@
                 <td><?=$row["basketDrinkId"]?></td>
 
                 <td><a href="dataOneEdit.php"  role="button"> Edit </a></td>
+                <td>
+                    <!--
+                    <form method="post" action="dataOneEdit.php">
+                        <input type="hidden" name="basketID" value="<?=$row["basketID"]?>" />
+                        <button type="submit" class="btn" onclick="return confirm('Confirm edit?')"> <div class="btn btn-Warning"> Edit <div> </button>
+                    </form>     
+                    -->
 
-                
+                    <form method="post" action="">
+                        <div class="mb-3">
+                          <label for="editInstructor<?=$row["instructor_id"]?>Name" class="form-label">Name</label>
+                          <input type="text" class="form-control" id="editInstructor<?=$row["instructor_id"]?>Name" aria-describedby="editInstructor<?=$row["instructor_id"]?>Help" name="iName" value="<?=$row['instructor_name']?>">
+                          <div id="editInstructor<?=$row["instructor_id"]?>Help" class="form-text">Enter the instructor's name.</div>
+                        </div>
+                        <input type="hidden" name="iid" value="<?=$row['instructor_id']?>">
+                        <input type="hidden" name="saveType" value="Edit">
+                        <input type="submit" class="btn btn-primary" value="Submit">
+                      </form>
+
+
+
+                </td>
+
                 <td>
                     <form method="post" action="dataOneDelete.php">
                         <input type="hidden" name="basketID" value="<?=$row["basketID"]?>" />
-                        <!-- <input type="hidden" name="saveType" value="Delete"> -->
-                        <button type="submit" class="btn" onclick="return confirm('Are you sure?')">Delete</button>
+                        <button type="submit" class="btn" onclick="return confirm('Confirm delete?')"> <div class="btn btn-Danger"> Delete <div> </button>
                     </form>      
                 </td>
 
