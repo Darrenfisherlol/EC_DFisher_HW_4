@@ -36,7 +36,7 @@
         $drink = $_GET['basketDrinkId'];
 
         // prepare and bind                                           
-        $sql = "INSERT INTO Basket (basketOwnerName, basketFoodId, basketDrinkId) VALUES (?, ?, ?)");
+        $sql = "INSERT INTO Basket (basketOwnerName, basketFoodId, basketDrinkId) VALUES (?, ?, ?)";
 
         $saveSql = $conn->prepare($sql);
 
