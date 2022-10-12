@@ -19,7 +19,7 @@
 
         <lable for="basketOwnerName" class="form-lable"> Name </lable>
         <input type="text" name="basketOwnerName" aria-describedby="Your Name">
-
+        
         <lable for="basketFoodId" class="form-lable"> Food ID </lable>
         <input type="text" name="basketFoodId" aria-describedby="Food ID">
 
@@ -29,6 +29,8 @@
         <input type="submit">
 
     </form>
+
+    </br>
 </div>
 
 <!--Show items that the user can add-->
@@ -91,6 +93,7 @@
 <div>
 
     <div>
+        </br>
         <h2>Drinks You Can Add</h2>
     </div>
 
