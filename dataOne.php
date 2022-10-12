@@ -63,7 +63,15 @@
                 <td><?=$row["basketDrinkId"]?></td>
 
                 <td><a href="dataOneEdit.php"  role="button"> Edit </a></td>
-                <td><a href="dataOneDelete.php"  role="button"> Delete </a></td>
+
+                
+                <td>
+                    <form method="post" action="dataOneDelete.php">
+                        <input type="hidden" name="basketID" value="<?=$row["basketID"]?>" />
+                        <!-- <input type="hidden" name="saveType" value="Delete"> -->
+                        <button type="submit" class="btn" onclick="return confirm('Are you sure?')">Delete</button>
+                    </form>      
+                </td>
 
             </tr>
             <?php

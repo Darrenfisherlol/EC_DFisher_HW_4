@@ -14,9 +14,39 @@
 
 </br>
 
-
 <div>
     
+<?php
+        $servername = "localhost";
+        $username = "darrenfi_darrenfi_homework4";
+        $password = "darrenfi_homework4";
+        $dbname = "darrenfi_homework_4";
+
+        // Create connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        // Check connection
+        if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+        }
+
+        // GET & POST 
+        $basketID = $_POST['basketID'];
+      
+        // prepare and bind
+        $sql = "DELETE FROM Basket WHERE basketID=?";
+
+        $saveSql = $conn->prepare($sql);
+
+        $saveSql->bind_param("i", $basketID);
+
+        $saveSql->execute();
+
+        $saveSql->close();
+
+        ?>
+
+    <a href="dataOne.php" class="btn btn-primary"> Back to basket table</a>
 </div>
     
 
