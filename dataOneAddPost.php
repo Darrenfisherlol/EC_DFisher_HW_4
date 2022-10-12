@@ -40,7 +40,7 @@
 
         $saveSql = $conn->prepare($sql);
 
-        $saveSql->bind_param("sii", $name, $food, $drink)
+        $saveSql->bind_param("sii", $name, $food, $drink);
         $saveSql->execute();
         $saveSql->close();
         ?>
