@@ -64,27 +64,11 @@
 
                 <td><a href="dataOneEdit.php"  role="button"> Edit </a></td>
                 <td>
-                    <!--
                     <form method="post" action="dataOneEdit.php">
                         <input type="hidden" name="basketID" value="<?=$row["basketID"]?>" />
-                        <button type="submit" class="btn" onclick="return confirm('Confirm edit?')"> <div class="btn btn-Warning"> Edit <div> </button>
-                    </form>     
-                    -->
-
-                    <form method="post" action="">
-                        <div class="mb-3">
-                          <label for="editBasketName<?=$row["basketID"]?>Name" class="form-label">Name</label>
-                          <input type="text" class="form-control" id="editBasketName<?=$row["basketID"]?>Name" aria-describedby="editInstructor<?=$row["basketID"]?>Help" value="<?=$row['basketOwnerNmae']?>">
-                          <div id="editBasketName<?=$row["basketID"]?>Help" class="form-text">Enter the new basket ID name.</div>
-                        </div>
-
-                        <input type="hidden" name="iid" value="<?=$row['basketID']?>">
-                        <input type="hidden" name="saveType" value="Edit">
-                        <input type="submit" class="btn btn-primary" value="Submit">
-                      </form>
-
-
-
+                        <button type="submit" class="btn"> <div class="btn btn-Warning"> Edit <div> </button>
+                    </form>    
+                    
                 </td>
 
                 <td>
