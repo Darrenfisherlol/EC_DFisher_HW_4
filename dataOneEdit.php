@@ -31,10 +31,12 @@
     // output data of each row
     while($row = $result->fetch_assoc()) {
     ?>
-    
+
     <div>
 
         <form action="dataOneEditPost.php" method="post">
+
+            <input type="hidden" name="basketID" value="<?=$basketID?>" />
 
             <lable for="basketOwnerName" class="form-lable"> Name </lable>
             <input type="text" name="basketOwnerName" aria-describedby="Your Name">
