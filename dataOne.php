@@ -62,13 +62,11 @@
                 <td><?=$row["basketFoodId"]?></td>
                 <td><?=$row["basketDrinkId"]?></td>
 
-                <td><a href="dataOneEdit.php"  role="button"> Edit </a></td>
                 <td>
                     <form method="post" action="dataOneEdit.php">
                         <input type="hidden" name="basketID" value="<?=$row["basketID"]?>" />
                         <button type="submit" class="btn"> <div class="btn btn-Warning"> Edit <div> </button>
                     </form>    
-                    
                 </td>
 
                 <td>
