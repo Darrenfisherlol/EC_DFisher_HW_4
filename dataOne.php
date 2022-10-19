@@ -65,7 +65,7 @@
                 <td>
                     <form method="post" action="dataOneEdit.php">
                         <input type="hidden" name="basketID" value="<?=$row["basketID"]?>" />
-                        <button type="submit" class="btn"> <div class="btn btn-Warning"> Edit <div> </button>
+                        <button type="submit" class="btn"> <div class="btn btn-primary"> Edit <div> </button>
                     </form>    
                 </td>
 

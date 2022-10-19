@@ -20,7 +20,7 @@
 
     $basketID = $_POST['basketID'];
 
-    $sql = "SELECT basketID, basketOwenerName, basketFoodId, basketDrinkId from Basket where basketID = ?";
+    $sql = "SELECT basketID, basketOwenerName, basketFoodId, basketDrinkId from Basket where basketID=?";
     $stmt = $conn->prepare($sql);
 
     $stmt->bind_param("i", $basketID);
