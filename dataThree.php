@@ -22,7 +22,7 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>foodId</th>
+                <th>foodID</th>
                 <th>foodName</th>
                 <th>foodCost</th>
                 <th>foodType</th>
@@ -47,7 +47,7 @@
             }
             //echo $iid;
 
-            $sql = "select foodId, foodName, foodCost, foodType from Food";
+            $sql = "select foodID, foodName, foodCost, foodType from Food";
             //echo $sql;
             $result = $conn->query($sql);
 
@@ -56,21 +56,21 @@
             while($row = $result->fetch_assoc()) {
             ?>
             <tr>
-                <td><?=$row["foodId"]?> </td>
+                <td><?=$row["foodID"]?> </td>
                 <td><?=$row["foodName"]?> </td>
                 <td><?=$row["foodCost"]?></td>
                 <td><?=$row["foodType"]?></td>
 
                 <td>
                     <form method="post" action="dataThreeEdit.php">
-                        <input type="hidden" name="foodId" value="<?=$row["foodId"]?>" />
+                        <input type="hidden" name="foodId" value="<?=$row["foodID"]?>" />
                         <button type="submit" class="btn"> <div class="btn btn-primary"> Edit <div> </button>
                     </form>    
                 </td>
 
                 <td>
                     <form method="post" action="dataThreeDelete.php">
-                        <input type="hidden" name="foodId" value="<?=$row["foodId"]?>" />
+                        <input type="hidden" name="foodID" value="<?=$row["foodID"]?>" />
                         <button type="submit" class="btn" onclick="return confirm('Confirm delete?')"> <div class="btn btn-Danger"> Delete </div> </button>
                     </form>      
                 </td>
