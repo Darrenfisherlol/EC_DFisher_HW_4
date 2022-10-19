@@ -73,11 +73,12 @@
 
                     <form method="post" action="">
                         <div class="mb-3">
-                          <label for="editInstructor<?=$row["instructor_id"]?>Name" class="form-label">Name</label>
-                          <input type="text" class="form-control" id="editInstructor<?=$row["instructor_id"]?>Name" aria-describedby="editInstructor<?=$row["instructor_id"]?>Help" name="iName" value="<?=$row['instructor_name']?>">
-                          <div id="editInstructor<?=$row["instructor_id"]?>Help" class="form-text">Enter the instructor's name.</div>
+                          <label for="editBasketName<?=$row["basketID"]?>Name" class="form-label">Name</label>
+                          <input type="text" class="form-control" id="editBasketName<?=$row["basketID"]?>Name" aria-describedby="editInstructor<?=$row["basketID"]?>Help" name="iName" value="<?=$row['basketOwnerNmae']?>">
+                          <div id="editBasketName<?=$row["basketID"]?>Help" class="form-text">Enter the new basket ID name.</div>
                         </div>
-                        <input type="hidden" name="iid" value="<?=$row['instructor_id']?>">
+
+                        <input type="hidden" name="iid" value="<?=$row['basketID']?>">
                         <input type="hidden" name="saveType" value="Edit">
                         <input type="submit" class="btn btn-primary" value="Submit">
                       </form>
@@ -106,7 +107,6 @@
     </table>
 </div>
     
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
 </body>
