@@ -20,10 +20,10 @@
         <lable for="basketOwnerName" class="form-lable"> Name </lable>
         <input type="text" name="basketOwnerName" aria-describedby="Your Name">
         
-        <lable for="basketFoodId" class="form-lable"> Food ID </lable>
+        <lable for="basketFoodId" class="form-lable"> Drink ID </lable>
         <input type="text" name="basketFoodId" aria-describedby="Food ID">
 
-        <lable for="basketDrinkId" class="form-lable"> Drink ID </lable>
+        <lable for="basketDrinkId" class="form-lable"> Food ID </lable>
         <input type="text" name="basketDrinkId" aria-describedby="Drink ID">
 
         <input type="submit">
