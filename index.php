@@ -11,10 +11,10 @@
         Check out:
     </h1>
 
-    <a class="btn btn-primary" href="dataOne.php"  role="button"> Baskets </a> 
-    <a class="btn btn-secondary" href="dataTwo.php"  role="button"> Drinks </a> 
-    <a class="btn btn-success" href="dataThree.php"  role="button"> Food </a> 
-    <a class="btn btn-info" href="dataFour.php"  role="button"> Stores </a> 
+    <a class="btn btn-primary btn-lg" href="dataOne.php"  role="button"> Baskets </a> 
+    <a class="btn btn-secondary btn-lg" href="dataTwo.php"  role="button"> Drinks </a> 
+    <a class="btn btn-success btn-lg" href="dataThree.php"  role="button"> Food </a> 
+    <a class="btn btn-info btn-lg" href="dataFour.php"  role="button"> Stores </a> 
 </div>
 
 
