@@ -18,7 +18,7 @@
     die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "SELECT basketID, basketOwenerName, basketFoodId, basketDrinkId from Basket";
+    $sql = "SELECT basketID, basketOwenerName, basketFoodId, basketDrinkId from Basket where basketID = ?";
     $stmt = $conn->prepare($sql);
 
     $stmt->bind_param("i", $_POST['basketID']);
@@ -29,9 +29,9 @@
     // output data of each row
     while($row = $result->fetch_assoc()) {
     ?>
-    <form method="post" action="instructor-edit-save.php">
+    <form method="post" action="dataOneEditPost.php">
 
-        <div class="mb-3">
+        <div>
             <label for="basketOwenerName" class="form-label">Name</label>
             <input type="text" class="form-control" id="basketOwenerName" aria-describedby="nameHelp" name="basketOwenerName" value="<?=$row['basketOwenerName']?>">
             <div> Enter the new basekt owner name.</div>
