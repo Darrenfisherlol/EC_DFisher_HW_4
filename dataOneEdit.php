@@ -18,10 +18,12 @@
     die("Connection failed: " . $conn->connect_error);
     }
 
+    $basketID = $_POST['basketID'];
+
     $sql = "SELECT basketID, basketOwenerName, basketFoodId, basketDrinkId from Basket where basketID = ?";
     $stmt = $conn->prepare($sql);
 
-    $stmt->bind_param("i", $_POST['basketID']);
+    $stmt->bind_param("i", $basketID);
     $stmt->execute();
     $result = $stmt->get_result();
 
