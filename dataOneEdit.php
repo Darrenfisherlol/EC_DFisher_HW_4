@@ -20,7 +20,7 @@
 
     $basketID = $_POST['basketID'];
 
-    $sql = "SELECT basketID, basketOwenerName, basketFoodId, basketDrinkId from Basket where basketID=?";
+    $sql = "SELECT basketID, basketOwenerName, basketFoodId, basketDrinkId from Basket where basketID=(?)";
     $stmt = $conn->prepare($sql);
 
     $stmt->bind_param("i", $basketID);
@@ -38,6 +38,7 @@
             <input type="text" class="form-control" id="basketOwenerName" aria-describedby="nameHelp" name="basketOwenerName" value="<?=$row['basketOwenerName']?>">
             <div> Enter the new basekt owner name.</div>
         </div>
+
 
         <input type="hidden" name="iid" value="<?=$row['basketID']?>">
 

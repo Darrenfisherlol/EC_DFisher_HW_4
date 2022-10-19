@@ -17,17 +17,18 @@
     die("Connection failed: " . $conn->connect_error);
     }
 
+    $basketName = $_POST['basketID'];
     $basketID = $_POST['basketID'];
 
     $sql = "update basket set basketOwnerName=? where basketID=?";
     //echo $sql;
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("si", $basketID, $_POST['basketID']);
+        $stmt->bind_param("si", $basketName, $basketID);
         $stmt->execute();
     ?>
         
     <h1>Edit basket</h1>
-    
+
     </br>
     <div class="alert alert-success" role="alert"> Basket edited. </div>
     </br>
