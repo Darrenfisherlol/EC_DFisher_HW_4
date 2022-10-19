@@ -3,6 +3,8 @@
 --  Homework 4
 -->
 
+<?php require_once("header.php")?>
+
 <div>
     <h1>Edit </h1>
     <?php
@@ -41,11 +43,11 @@
             <lable for="drinkName" class="form-lable"> Name </lable>
             <input type="text" name="drinkName" aria-describedby="Drink Name">
             
-            <lable for="drinkCost" class="form-lable"> Drink ID </lable>
+            <lable for="drinkCost" class="form-lable"> Drink Cost </lable>
             <input type="text" name="drinkCost" aria-describedby="Drink cost">
 
-            <lable for="basketDrinkId" class="form-lable"> Food ID </lable>
-            <input type="text" name="basketDrinkId" aria-describedby="Drink ID">
+            <lable for="drinkTemperature" class="form-lable"> Drink Temperature </lable>
+            <input type="text" name="drinkTemperature" aria-describedby="drinkTemperature">
 
             <input type="submit">
 

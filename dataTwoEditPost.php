@@ -3,6 +3,8 @@
 --  Homework 4
 -->
 
+<?php require_once("header.php")?>
+
 <div>
     <?php
     $servername = "localhost";
@@ -49,7 +51,7 @@
     </br>
     <div class="alert alert-success" role="alert"> Basket edited. </div>
     </br>
-    <a href="dataOne.php" class="btn btn-primary"> Data Table One</a>
+    <a href="dataTwo.php" class="btn btn-primary"> Data Table Two</a>
 
 
 </div>

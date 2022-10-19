@@ -3,6 +3,9 @@
 --  Homework 4
 -->
 
+
+<?php require_once("header.php")?>
+
 <div>
     <?php
     $servername = "localhost";
