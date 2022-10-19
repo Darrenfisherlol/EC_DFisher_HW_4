@@ -33,17 +33,21 @@
     ?>
     <form method="post" action="dataOneEditPost.php">
 
-        <div>
-            <label for="basketOwenerName" class="form-label">Name</label>
-            <input type="text" class="form-control" id="basketOwenerName" aria-describedby="nameHelp" name="basketOwenerName" value="<?=$row['basketOwenerName']?>">
-            <div> Enter the new basekt owner name.</div>
-        </div>
+        <label for="basketOwnerName" class="form-label">Enter Basket Name</label>
+        <input type="hidden" name="basketOwnerName" value="<?=$row["basketOwnerName"]?>" />
+
+        <label for="basketFoodId" class="form-label">Enter Food ID</label>
+        <input type="hidden" name="basketFoodId" value="<?=$row["basketFoodId"]?>" />
+        
+        <label for="basketDrinkId" class="form-label">Enter Drink ID</label>
+        <input type="hidden" name="basketDrinkId" value="<?=$row["basketDrinkId"]?>" />
+
+        <button type="submit" class="btn"> 
+            <div class="btn btn-primary"> Submit <div>
+        </button>
+    </form>   
 
 
-        <input type="hidden" name="iid" value="<?=$row['basketID']?>">
-
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
     <?php
     }
     } else {
