@@ -19,39 +19,39 @@
     die("Connection failed: " . $conn->connect_error);
     }
 
-    $drinkId = $_POST['drinkId'];
+    $foodId = $_POST['foodId'];
 
-    $drinkName = $_POST['drinkName'];
-    $drinkCost = $_POST['drinkCost'];
-    $drinkTemp = $_POST['drinkTemperature'];
+    $foodName = $_POST['foodName'];
+    $foodCost = $_POST['foodCost'];
+    $foodtype = $_POST['foodType'];
 
-    $sql = "update Drink set drinkName=? where drinkId=?";
+    $sql = "update Food set foodName=? where foodId=?";
     //echo $sql;
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("si", $drinkName, $drinkId);
+        $stmt->bind_param("si", $foodName, $foodId);
         $stmt->execute();
     
-    $sqlTwo = "update Drink set drinkCost=? where drinkId=?";
+    $sqlTwo = "update Food set foodCost=? where foodId=?";
     //echo $sql;
         $stmt = $conn->prepare($sqlTwo);
-        $stmt->bind_param("ii", $drinkCost, $drinkId);
+        $stmt->bind_param("ii", $foodCost, $foodId);
         $stmt->execute();
        
-    $sqlThree = "update Drink set drinkTemperature=? where drinkId=?";
+    $sqlThree = "update Food set foodType=? where foodId=?";
     //echo $sql;
         $stmt = $conn->prepare($sqlThree);
-        $stmt->bind_param("si", $drinkTemp, $drinkId);
+        $stmt->bind_param("si", $foodtype, $foodId);
         $stmt->execute();
           
     
     ?>
         
-    <h1>Edit basket</h1>
+    <h1>Edit Food</h1>
 
     </br>
-    <div class="alert alert-success" role="alert"> Basket edited. </div>
+    <div class="alert alert-success" role="alert"> Food edited. </div>
     </br>
-    <a href="dataTwo.php" class="btn btn-primary"> Data Table Two</a>
+    <a href="dataThree.php" class="btn btn-primary"> Data Table Three</a>
 
 
 </div>
