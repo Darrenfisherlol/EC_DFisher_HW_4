@@ -72,7 +72,7 @@
                 <td>
                     <form method="post" action="dataOneDelete.php">
                         <input type="hidden" name="basketID" value="<?=$row["basketID"]?>" />
-                        <button type="submit" class="btn" onclick="return confirm('Confirm delete?')"> <div class="btn btn-Danger"> Delete <div> </button>
+                        <button type="submit" class="btn" onclick="return confirm('Confirm delete?')"> <div class="btn btn-Danger"> Delete </div> </button>
                     </form>      
                 </td>
 

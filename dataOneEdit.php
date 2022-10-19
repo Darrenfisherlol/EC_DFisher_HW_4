@@ -31,22 +31,26 @@
     // output data of each row
     while($row = $result->fetch_assoc()) {
     ?>
-    <form method="post" action="dataOneEditPost.php">
+    
+    <div>
 
-        <label for="basketOwnerName" class="form-label">Enter Basket Name</label>
-        <input type="hidden" name="basketOwnerName" value="<?=$row["basketOwnerName"]?>" />
+        <form action="dataOneEditPost.php" method="post">
 
-        <label for="basketFoodId" class="form-label">Enter Food ID</label>
-        <input type="hidden" name="basketFoodId" value="<?=$row["basketFoodId"]?>" />
-        
-        <label for="basketDrinkId" class="form-label">Enter Drink ID</label>
-        <input type="hidden" name="basketDrinkId" value="<?=$row["basketDrinkId"]?>" />
+            <lable for="basketOwnerName" class="form-lable"> Name </lable>
+            <input type="text" name="basketOwnerName" aria-describedby="Your Name">
+            
+            <lable for="basketFoodId" class="form-lable"> Drink ID </lable>
+            <input type="text" name="basketFoodId" aria-describedby="Food ID">
 
-        <button type="submit" class="btn"> 
-            <div class="btn btn-primary"> Submit <div>
-        </button>
-    </form>   
+            <lable for="basketDrinkId" class="form-lable"> Food ID </lable>
+            <input type="text" name="basketDrinkId" aria-describedby="Drink ID">
 
+            <input type="submit">
+
+        </form>
+
+        </br>
+    </div>
 
     <?php
     }
