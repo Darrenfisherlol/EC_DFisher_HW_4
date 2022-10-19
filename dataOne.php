@@ -74,7 +74,7 @@
                     <form method="post" action="">
                         <div class="mb-3">
                           <label for="editBasketName<?=$row["basketID"]?>Name" class="form-label">Name</label>
-                          <input type="text" class="form-control" id="editBasketName<?=$row["basketID"]?>Name" aria-describedby="editInstructor<?=$row["basketID"]?>Help" name="iName" value="<?=$row['basketOwnerNmae']?>">
+                          <input type="text" class="form-control" id="editBasketName<?=$row["basketID"]?>Name" aria-describedby="editInstructor<?=$row["basketID"]?>Help" value="<?=$row['basketOwnerNmae']?>">
                           <div id="editBasketName<?=$row["basketID"]?>Help" class="form-text">Enter the new basket ID name.</div>
                         </div>
 
