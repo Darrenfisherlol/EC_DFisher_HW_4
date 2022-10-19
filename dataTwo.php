@@ -9,13 +9,13 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
 <div>
-    <h1> Database One </h1>
+    <h1> Database 2 -Drinks Table</h1>
 </div>
 
 </br>
 
 <div>
-    <td><a class="btn btn-primary" href="dataOneAdd.php"  role="button"> Add Data </a></td>
+    <td><a class="btn btn-primary" href="dataTwoAdd.php"  role="button"> Add Data </a></td>
 
 </div>
 

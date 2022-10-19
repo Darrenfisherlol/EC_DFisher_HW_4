@@ -19,10 +19,10 @@
         <!-- Pages -->
         <div>
             <a class="btn btn-primary" href="index.php"  role="button">Home Page </a> 
-            <a class="btn btn-primary" href="dataOne.php"  role="button">Data Set 1 </a> 
-            <a class="btn btn-primary" href="dataTwo.php"  role="button">Data Set 2 </a> 
-            <a class="btn btn-primary" href="dataThree.php"  role="button">Data Set 3 </a> 
-            <a class="btn btn-primary" href="dataFour.php"  role="button">Data Set 4 </a> 
+            <a class="btn btn-primary" href="dataOne.php"  role="button">Basket </a> 
+            <a class="btn btn-primary" href="dataTwo.php"  role="button">Drinks </a> 
+            <a class="btn btn-primary" href="dataThree.php"  role="button">Food </a> 
+            <a class="btn btn-primary" href="dataFour.php"  role="button">Stores </a> 
         </div>
 
         <div>

@@ -40,7 +40,7 @@
 
         $saveSql = $conn->prepare($sql);
 
-        $saveSql->bind_param("sii", $name, $cost, $temp);
+        $saveSql->bind_param("sis", $name, $cost, $temp);
 
         $saveSql->execute();
 
@@ -48,7 +48,7 @@
         ?>
 
 
-    <a href="dataOne.php" class="btn btn-primary"> Back to Drink table</a>
+    <a href="dataTwo.php" class="btn btn-primary"> Back to Drink table</a>
 
 </div>
 

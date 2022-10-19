@@ -18,7 +18,7 @@
     die("Connection failed: " . $conn->connect_error);
     }
 
-    $drinkId = $_POST['basketID'];
+    $drinkId = $_POST['drinkId'];
 
     $sql = "SELECT drinkId, drinkName, drinkCost, drinkTemperature from Drink where drinkId=(?)";
     $stmt = $conn->prepare($sql);
