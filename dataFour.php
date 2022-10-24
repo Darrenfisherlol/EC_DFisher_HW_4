@@ -15,7 +15,7 @@
 </br>
 
 <div>
-    <td><a class="btn btn-primary" href="dataOneAdd.php"  role="button"> Add Data </a></td>
+    <td><a class="btn btn-primary" href="dataFourAdd.php"  role="button"> Add Data </a></td>
 
 </div>
 

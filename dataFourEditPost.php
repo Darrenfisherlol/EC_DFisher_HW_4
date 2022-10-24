@@ -22,38 +22,38 @@
 
     $storeId = $_POST['storeId'];
 
-    $basketName = $_POST['storeName'];
+    $storeName = $_POST['storeName'];
     $storeCost = $_POST['storeCost'];
     $storeHours = $_POST['storeHours'];
 
 
-    $sql = "update Basket set storeName=? where storeId=?";
+    $sql = "update Store set storeName=? where storeId=?";
     //echo $sql;
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("si", $basketName, $storeId);
+        $stmt->bind_param("si", $storeName, $storeId);
         $stmt->execute();
     
-    $sqlTwo = "update Basket set storeCost=? where storeId=?";
+    $sqlTwo = "update Store set storeCost=? where storeId=?";
     //echo $sql;
         $stmt = $conn->prepare($sqlTwo);
-        $stmt->bind_param("ii", $storeCost, $storeId);
+        $stmt->bind_param("si", $storeCost, $storeId);
         $stmt->execute();
        
-    $sqlThree = "update Basket set storeHours=? where storeId=?";
+    $sqlThree = "update Store set storeHours=? where storeId=?";
     //echo $sql;
         $stmt = $conn->prepare($sqlThree);
-        $stmt->bind_param("ii", $storeHours, $storeId);
+        $stmt->bind_param("si", $storeHours, $storeId);
         $stmt->execute();
           
     
     ?>
         
-    <h1>Edit basket</h1>
+    <h1>Edit Store</h1>
 
     </br>
-    <div class="alert alert-success" role="alert"> Basket edited. </div>
+    <div class="alert alert-success" role="alert"> Store edited. </div>
     </br>
-    <a href="dataOne.php" class="btn btn-primary"> Data Table One</a>
+    <a href="dataFour.php" class="btn btn-primary"> Data Table Four</a>
 
 
 </div>

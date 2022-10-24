@@ -9,13 +9,13 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
 <div>
-    <h1> Drink Additions </h1>
+    <h1> Food Additions </h1>
 </div>
 
 </br>
 
 <div>
-    <form action="dataTwoAddPost.php" method="post">
+    <form action="dataThreeAddPost.php" method="post">
 
         <lable for="foodName" class="form-lable"> Food Name </lable>
         <input type="text" name="drinkName" aria-describedby="Drink Name">

@@ -22,12 +22,12 @@
     die("Connection failed: " . $conn->connect_error);
     }
 
-    $basketID = $_POST['basketID'];
+    $storeId = $_POST['storeId'];
 
-    $sql = "SELECT basketID, basketOwnerName, basketFoodId, basketDrinkId from Basket where basketID=(?)";
+    $sql = "SELECT storeId, storeName, storeCost, storeHours from Store where storeId=(?)";
     $stmt = $conn->prepare($sql);
 
-    $stmt->bind_param("i", $basketID);
+    $stmt->bind_param("i", $storeId);
     $stmt->execute();
     $result = $stmt->get_result();
 
@@ -42,14 +42,14 @@
 
             <input type="hidden" name="storeId" value="<?=$basketID?>" />
 
-            <lable for="basketOwnerName" class="form-lable"> Name </lable>
-            <input type="text" name="basketOwnerName" aria-describedby="Your Name">
+            <lable for="storeName" class="form-lable"> Name </lable>
+            <input type="text" name="storeName" aria-describedby="Store Name">
             
-            <lable for="basketFoodId" class="form-lable"> Drink ID </lable>
-            <input type="text" name="basketFoodId" aria-describedby="Food ID">
+            <lable for="storeCost" class="form-lable"> Store cost </lable>
+            <input type="text" name="storeCost" aria-describedby="Store Cost">
 
-            <lable for="basketDrinkId" class="form-lable"> Food ID </lable>
-            <input type="text" name="basketDrinkId" aria-describedby="Drink ID">
+            <lable for="storeHours" class="form-lable"> Hours Open </lable>
+            <input type="text" name="storeHours" aria-describedby="Hours">
 
             <input type="submit">
 

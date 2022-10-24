@@ -15,7 +15,7 @@
 </br>
 
 <div>
-    <form action="dataTwoAddPost.php" method="post">
+    <form action="dataFourAddPost.php" method="post">
 
         <lable for="storeName" class="form-lable"> Store Name </lable>
         <input type="text" name="storeName" aria-describedby="Drink Name">
@@ -24,7 +24,7 @@
         <input type="text" name="storeCost" aria-describedby="5.00">
 
         <lable for="storeHours" class="form-lable"> Store Hours </lable>
-        <input type="text" name="storeHours" aria-describedby="24/7">
+        <input type="text" name="storeHours" aria-describedby="8:00-20:00">
 
         <input type="submit">
 

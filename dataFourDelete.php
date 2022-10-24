@@ -46,7 +46,7 @@
 
         ?>
 
-    <a href="dataThree.php" class="btn btn-primary"> Back to Food table</a>
+    <a href="dataFour.php" class="btn btn-primary"> Back to Store table</a>
 </div>
     
 
