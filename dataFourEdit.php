@@ -24,7 +24,7 @@
 
     $storeId = $_POST['storeId'];
 
-    $sql = "SELECT storeId, storeName, storeCost, storeHours from Store where storeId=(?)";
+    $sql = "SELECT storeId, storeName, storeCost, storeHours from Store where storeId=?";
     $stmt = $conn->prepare($sql);
 
     $stmt->bind_param("i", $storeId);
@@ -40,7 +40,7 @@
 
         <form action="dataFourEditPost.php" method="post">
 
-            <input type="hidden" name="storeId" value="<?=$basketID?>" />
+            <input type="hidden" name="storeId" value="<?=$storeId?>" />
 
             <lable for="storeName" class="form-lable"> Name </lable>
             <input type="text" name="storeName" aria-describedby="Store Name">

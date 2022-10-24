@@ -9,7 +9,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
 <div>
-    <div class="alert alert-success"> New Store Added</div>
+    <div class="alert alert-success"> New Shop Added</div>
 </div>
 
 </br>
@@ -36,7 +36,7 @@
         $storeHours = $_POST['storeHours'];
 
         // prepare and bind
-        $sql = "INSERT INTO Food (storeName, storeCost, storeHours) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO Store (storeName, storeCost, storeHours) VALUES (?, ?, ?)";
 
         $saveSql = $conn->prepare($sql);
 
@@ -56,4 +56,3 @@
 
 </body>
 </html>
-
