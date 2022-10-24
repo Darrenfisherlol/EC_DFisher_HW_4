@@ -22,7 +22,7 @@
 
     $drinkId = $_POST['drinkId'];
 
-    $sql = "SELECT drinkId, drinkName, drinkCost, drinkTemperature from Drink where drinkId=(?)";
+    $sql = "SELECT drinkId, drinkName, drinkCost, drinkTemperature from Drink where drinkId=?";
     $stmt = $conn->prepare($sql);
 
     $stmt->bind_param("i", $drinkId);
@@ -38,7 +38,7 @@
 
         <form action="dataTwoEditPost.php" method="post">
 
-            <input type="hidden" name="drinkId" value="<?=$basketID?>" />
+            <input type="hidden" name="drinkId" value="<?=$drinkId?>" />
 
             <lable for="drinkName" class="form-lable"> Name </lable>
             <input type="text" name="drinkName" aria-describedby="Drink Name">
