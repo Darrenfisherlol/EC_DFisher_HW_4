@@ -20,12 +20,12 @@
     die("Connection failed: " . $conn->connect_error);
     }
 
-    $foodId = $_POST['foodId'];
+    $foodID = $_POST['foodID'];
 
-    $sql = "SELECT foodId, foodName, foodPrice, foodType from Food where foodId=(?)";
+    $sql = "SELECT foodID, foodName, foodPrice, foodType from Food where foodID=(?)";
     $stmt = $conn->prepare($sql);
 
-    $stmt->bind_param("i", $foodId);
+    $stmt->bind_param("i", $foodID);
     $stmt->execute();
     $result = $stmt->get_result();
 
@@ -38,7 +38,7 @@
 
         <form action="dataThreeEditPost.php" method="post">
 
-            <input type="hidden" name="foodId" value="<?=$foodId?>" />
+            <input type="hidden" name="foodID" value="<?=$foodID?>" />
 
             <lable for="foodName" class="form-lable"> Name </lable>
             <input type="text" name="foodName" aria-describedby="Food Name">

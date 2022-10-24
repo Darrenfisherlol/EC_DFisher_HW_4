@@ -63,7 +63,7 @@
 
                 <td>
                     <form method="post" action="dataThreeEdit.php">
-                        <input type="hidden" name="foodId" value="<?=$row["foodID"]?>" />
+                        <input type="hidden" name="foodID" value="<?=$row["foodID"]?>" />
                         <button type="submit" class="btn"> <div class="btn btn-primary"> Edit <div> </button>
                     </form>    
                 </td>

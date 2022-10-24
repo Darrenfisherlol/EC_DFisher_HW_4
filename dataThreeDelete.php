@@ -31,14 +31,14 @@
         }
 
         // GET & POST 
-        $foodId = $_POST['foodId'];
+        $foodID = $_POST['foodID'];
       
         // prepare and bind
-        $sql = "DELETE FROM Food WHERE foodId=?";
+        $sql = "DELETE FROM Food WHERE foodID=?";
 
         $saveSql = $conn->prepare($sql);
 
-        $saveSql->bind_param("i", $foodId);
+        $saveSql->bind_param("i", $foodID);
 
         $saveSql->execute();
 

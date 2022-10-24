@@ -40,7 +40,7 @@
 
         $saveSql = $conn->prepare($sql);
 
-        $saveSql->bind_param("sis", $storeName, $storeCost, $storeHours);
+        $saveSql->bind_param("sss", $storeName, $storeCost, $storeHours);
 
         $saveSql->execute();
 

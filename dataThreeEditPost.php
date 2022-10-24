@@ -19,28 +19,28 @@
     die("Connection failed: " . $conn->connect_error);
     }
 
-    $foodId = $_POST['foodId'];
+    $foodID = $_POST['foodID'];
 
     $foodName = $_POST['foodName'];
-    $foodCost = $_POST['foodPrice'];
+    $foodPrice = $_POST['foodPrice'];
     $foodtype = $_POST['foodType'];
 
-    $sql = "update Food set foodName=? where foodId=?";
+    $sql = "update Food set foodName=? where foodID=?";
     //echo $sql;
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("si", $foodName, $foodId);
+        $stmt->bind_param("si", $foodName, $foodID);
         $stmt->execute();
     
-    $sqlTwo = "update Food set foodPrice=? where foodId=?";
+    $sqlTwo = "update Food set foodPrice=? where foodID=?";
     //echo $sql;
         $stmt = $conn->prepare($sqlTwo);
-        $stmt->bind_param("ii", $foodPrice, $foodId);
+        $stmt->bind_param("ii", $foodPrice, $foodID);
         $stmt->execute();
        
-    $sqlThree = "update Food set foodType=? where foodId=?";
+    $sqlThree = "update Food set foodType=? where foodID=?";
     //echo $sql;
         $stmt = $conn->prepare($sqlThree);
-        $stmt->bind_param("si", $foodtype, $foodId);
+        $stmt->bind_param("si", $foodtype, $foodID);
         $stmt->execute();
           
     
