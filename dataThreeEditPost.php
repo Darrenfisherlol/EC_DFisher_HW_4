@@ -22,7 +22,7 @@
     $foodId = $_POST['foodId'];
 
     $foodName = $_POST['foodName'];
-    $foodCost = $_POST['foodCost'];
+    $foodCost = $_POST['foodPrice'];
     $foodtype = $_POST['foodType'];
 
     $sql = "update Food set foodName=? where foodId=?";
@@ -31,10 +31,10 @@
         $stmt->bind_param("si", $foodName, $foodId);
         $stmt->execute();
     
-    $sqlTwo = "update Food set foodCost=? where foodId=?";
+    $sqlTwo = "update Food set foodPrice=? where foodId=?";
     //echo $sql;
         $stmt = $conn->prepare($sqlTwo);
-        $stmt->bind_param("ii", $foodCost, $foodId);
+        $stmt->bind_param("ii", $foodPrice, $foodId);
         $stmt->execute();
        
     $sqlThree = "update Food set foodType=? where foodId=?";

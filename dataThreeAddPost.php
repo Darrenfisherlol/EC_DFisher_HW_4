@@ -32,11 +32,11 @@
 
         // GET & POST 
         $name = $_POST['foodName'];
-        $cost = $_POST['foodCost'];
+        $cost = $_POST['foodPrice'];
         $type = $_POST['foodType'];
 
         // prepare and bind
-        $sql = "INSERT INTO Food (foodName, foodCost, foodType) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO Food (foodName, foodPrice, foodType) VALUES (?, ?, ?)";
 
         $saveSql = $conn->prepare($sql);
 

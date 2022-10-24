@@ -18,13 +18,13 @@
     <form action="dataThreeAddPost.php" method="post">
 
         <lable for="foodName" class="form-lable"> Food Name </lable>
-        <input type="text" name="drinkName" aria-describedby="Drink Name">
+        <input type="text" name="foodName" aria-describedby="Food Name">
         
-        <lable for="drinkCost" class="form-lable"> Food Cost </lable>
-        <input type="text" name="drinkCost" aria-describedby="5.00">
+        <lable for="foodPrice" class="form-lable"> Food Price </lable>
+        <input type="text" name="foodPrice" aria-describedby="5.00">
 
-        <lable for="drinkTemperature" class="form-lable"> Food Type </lable>
-        <input type="text" name="drinkTemperature" aria-describedby="Cold">
+        <lable for="foodType" class="form-lable"> Food Type </lable>
+        <input type="text" name="foodType" aria-describedby="Cold">
 
         <input type="submit">
 

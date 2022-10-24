@@ -47,7 +47,7 @@
             }
             //echo $iid;
 
-            $sql = "select foodID, foodName, foodCost, foodType from Food";
+            $sql = "select foodID, foodName, foodPrice, foodType from Food";
             //echo $sql;
             $result = $conn->query($sql);
 
@@ -58,7 +58,7 @@
             <tr>
                 <td><?=$row["foodID"]?> </td>
                 <td><?=$row["foodName"]?> </td>
-                <td><?=$row["foodCost"]?></td>
+                <td><?=$row["foodPrice"]?></td>
                 <td><?=$row["foodType"]?></td>
 
                 <td>

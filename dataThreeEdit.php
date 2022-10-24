@@ -22,7 +22,7 @@
 
     $foodId = $_POST['foodId'];
 
-    $sql = "SELECT foodId, foodName, foodCost, foodType from Food where foodId=(?)";
+    $sql = "SELECT foodId, foodName, foodPrice, foodType from Food where foodId=(?)";
     $stmt = $conn->prepare($sql);
 
     $stmt->bind_param("i", $foodId);
@@ -43,8 +43,8 @@
             <lable for="foodName" class="form-lable"> Name </lable>
             <input type="text" name="foodName" aria-describedby="Food Name">
             
-            <lable for="foodCost" class="form-lable"> Food Cost </lable>
-            <input type="text" name="foodCost" aria-describedby="Food cost">
+            <lable for="foodPrice" class="form-lable"> Food Price </lable>
+            <input type="text" name="foodPrice" aria-describedby="Food Price">
 
             <lable for="foodType" class="form-lable"> Food type </lable>
             <input type="text" name="foodType" aria-describedby="Food type">

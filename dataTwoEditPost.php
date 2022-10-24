@@ -46,10 +46,10 @@
     
     ?>
         
-    <h1>Edit basket</h1>
+    <h1>Edit Drink</h1>
 
     </br>
-    <div class="alert alert-success" role="alert"> Basket edited. </div>
+    <div class="alert alert-success" role="alert"> Drink edited. </div>
     </br>
     <a href="dataTwo.php" class="btn btn-primary"> Data Table Two</a>
 
