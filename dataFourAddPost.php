@@ -36,7 +36,7 @@
         $storeHours = $_POST['storeHours'];
 
         // prepare and bind
-        $sql = "INSERT INTO Food (storeName, storeCost, fostoreHoursodType) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO Food (storeName, storeCost, storeHours) VALUES (?, ?, ?)";
 
         $saveSql = $conn->prepare($sql);
 
