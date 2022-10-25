@@ -61,23 +61,36 @@
 
             if ($result->num_rows > 0) {
             // output data of each row
-            ?>
+                ?>
+
                 <select name="foodId" id="food-select">
                 <label for="food-select">Choose a pet:</label>
                     <option value=""> Options </option>
 
-            <?php
-                    while($row = $result->fetch_assoc()) {
-                    ?>
+                <?php
 
-                            
-                            <option value=""> <?=$row["foodName"]?></option>
-                        
-                    <?php
+                    while($row = $result->fetch_assoc()) {
+                        ?>
+
+                        <form action="dataOneAddPost.php" method="post">
+
+                            <input type="text" list="foodName" name="foodName"> 
+
+                            <datalist id="foodName">
+                                <option value=""> <?=$row["foodName"]?></option>
+
+                            </datalist>
+
+                            <input type="submit" value="Submit">
+
+                        </form>
+
+                        <?php
                     
                     }
+
                     ?>
-                    
+
                 </select>
 
                 <?php
@@ -91,6 +104,10 @@
     
    
 </div>
+
+
+
+
 
 
 <!--Show items that the user can add-->
