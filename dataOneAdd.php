@@ -66,7 +66,7 @@
             
             <label for="foodId">Choose a food:</label>
                 <select name="foodId" id="foodId">
-                <td><option value="<?=$row["foodName"]?>">Food Name</option></td>
+                <td><option value="foodName"><?=$row["foodName"]?></option></td>
             </select>
 
             
