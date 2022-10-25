@@ -40,16 +40,7 @@
         <h2>Foods You Can Add</h2>
     </div>
 
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Food Id</th>
-                <th>Food Name</th>
-            </tr>
-        </thead>
-
-        <tbody>
-
+  
         <?php
             $servername = "localhost";
             $username = "darrenfi_darrenfi_homework4";
@@ -72,10 +63,13 @@
             // output data of each row
             while($row = $result->fetch_assoc()) {
             ?>
-            <tr>
-                <td><?=$row["foodID"]?> </td>
-                <td><?=$row["foodName"]?> </td>
-            </tr>
+            
+            <label for="foodId">Choose a food:</label>
+                <select name="foodId" id="foodId">
+                <td><option value="<?=$row["foodName"]?>">Food Name</option></td>
+            </select>
+
+            
             <?php
             }
             } else {
@@ -83,7 +77,7 @@
             }
             $conn->close();
         ?>
-        </tbody>
+       
 
     </table>
 </div>
