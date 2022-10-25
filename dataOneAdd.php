@@ -63,7 +63,13 @@
             // output data of each row
                 ?>
 
+<form action="dataOneAddPost.php" method="post">
+
                 <select name="foodId" id="food-select">
+
+                <input type="text" list="foodName" name="foodName"> 
+
+                <datalist id="foodName">
                 <label for="food-select">Choose a pet:</label>
                     <option value=""> Options </option>
 
@@ -72,18 +78,11 @@
                     while($row = $result->fetch_assoc()) {
                         ?>
 
-                        <form action="dataOneAddPost.php" method="post">
 
-                            <input type="text" list="foodName" name="foodName"> 
-
-                            <datalist id="foodName">
+                           
                                 <option value=""> <?=$row["foodName"]?></option>
 
-                            </datalist>
 
-                            <input type="submit" value="Submit">
-
-                        </form>
 
                         <?php
                     
@@ -92,6 +91,11 @@
                     ?>
 
                 </select>
+                
+                </datalist>
+
+<input type="submit" value="Submit">
+                </form>
 
                 <?php
             } 
