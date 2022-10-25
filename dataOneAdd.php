@@ -58,46 +58,15 @@
             
             $result = $conn->query($sql);
 
-
             if ($result->num_rows > 0) {
             // output data of each row
-                ?>
-
-<form action="dataOneAddPost.php" method="post">
-
-                <select name="foodId" id="food-select">
-
-                <input type="text" list="foodName" name="foodName"> 
-
-                <datalist id="foodName">
-                <label for="food-select">Choose a pet:</label>
-                    <option value=""> Options </option>
-
-                <?php
-
-                    while($row = $result->fetch_assoc()) {
-                        ?>
-
-
-                           
-                                <option value="<?=$row["foodName"]?>"> <?=$row["foodName"]?></option>
-
-
-
-                        <?php
-                    
-                    }
-
-                    ?>
-
-                </select>
-                
-                </datalist>
-
-<input type="submit" value="Submit">
-                </form>
-
-                <?php
+            while($row = $result->fetch_assoc()) {
+            ?>
+            <tr>
+                <td><?=$row["foodId"]?> </td>
+                <td><?=$row["foodName"]?> </td>
+            </tr>
+            <?php
             } 
             else {
                 echo "0 results";
