@@ -58,28 +58,31 @@
             
             $result = $conn->query($sql);
 
+
             if ($result->num_rows > 0) {
             // output data of each row
-            while($row = $result->fetch_assoc()) {
             ?>
-
-
-                <label for="food-select">Choose a pet:</label>
-
                 <select name="foodId" id="food-select">
+                <label for="food-select">Choose a pet:</label>
                     <option value=""> Options </option>
-                    
 
-                    <option value="<?=$row["foodId"]?>"> <?=$row["foodName"]?></option>
-                
+            <?php
+                    while($row = $result->fetch_assoc()) {
+                    ?>
+
+                            
+                            <option value=""> <?=$row["foodName"]?></option>
+                        
+                    <?php
+                    
+                    }
+                    ?>
                     
                 </select>
 
-
-
-            <?php
-            }
-            } else {
+                <?php
+            } 
+            else {
                 echo "0 results";
             }
             $conn->close();
