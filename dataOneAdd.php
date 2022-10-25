@@ -40,7 +40,6 @@
         <h2>Foods You Can Add</h2>
     </div>
 
-  
         <?php
             $servername = "localhost";
             $username = "darrenfi_darrenfi_homework4";
@@ -56,20 +55,28 @@
             //echo $iid;
 
             $sql = "select foodID, foodName from Food";
-            //echo $sql;
+            
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
             // output data of each row
             while($row = $result->fetch_assoc()) {
             ?>
-            
-            <label for="foodId">Choose a food:</label>
-                <select name="foodId" id="foodId">
-                <td><option value="foodName"><?=$row["foodName"]?></option></td>
-            </select>
 
-            
+
+                <label for="food-select">Choose a pet:</label>
+
+                <select name="foodId" id="food-select">
+                    <option value=""> Options </option>
+                    
+
+                    <option value="<?=$row["foodId"]?>"> <?=$row["foodName"]?></option>
+                
+                    
+                </select>
+
+
+
             <?php
             }
             } else {
@@ -77,9 +84,9 @@
             }
             $conn->close();
         ?>
-       
-
-    </table>
+        
+    
+   
 </div>
 
 
