@@ -80,7 +80,7 @@
 
 
                            
-                                <option value=""> <?=$row["foodName"]?></option>
+                                <option value="<?=$row["foodName"]?>"> <?=$row["foodName"]?></option>
 
 
 
