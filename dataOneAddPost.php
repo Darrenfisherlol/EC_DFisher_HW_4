@@ -32,7 +32,12 @@
 
         // GET & POST 
         $name = $_POST['basketOwnerName'];
-        $food = $_POST['basketFoodId'];
+
+
+        $foodName = $_POST['basketFoodId'];
+
+        $food = "SELECT foodID FROM Food WHERE foodname like $foodName";
+
         $drink = $_POST['basketDrinkId'];
 
         // prepare and bind

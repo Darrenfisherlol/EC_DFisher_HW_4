@@ -20,9 +20,14 @@
         <lable for="basketOwnerName" class="form-lable"> Name </lable>
         <input type="text" name="basketOwnerName" aria-describedby="Your Name">
         
+        </br>
+        
         <lable for="basketFoodId" class="form-lable"> Drink ID </lable>
         <input type="text" name="basketFoodId" aria-describedby="Food ID">
 
+        </br>
+
+        <div id="htmlSelect">
         <?php
             $servername = "localhost";
             $username = "darrenfi_darrenfi_homework4";
@@ -57,6 +62,7 @@
            
         ?>
             </select>
+        <div>
 
         <input type="submit">
 
