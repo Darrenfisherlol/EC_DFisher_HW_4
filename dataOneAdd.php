@@ -22,8 +22,8 @@
         
         </br>
         
-        <lable for="basketFoodId" class="form-lable"> Drink ID </lable>
-        <input type="text" name="basketFoodId" aria-describedby="Food ID">
+        <lable for="basketDrinkId" class="form-lable"> Drink ID </lable>
+        <input type="text" name="basketDrinkId" aria-describedby="Drink ID">
 
         </br>
 
