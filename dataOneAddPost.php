@@ -37,11 +37,9 @@
 
 
         $food = "SELECT foodID FROM Food WHERE foodname like '$foodName'";
-        
+
         $sqlTestPleaseWork = $conn->prepare($food);
         $sqlTestPleaseWork->execute();
-
-        echo $sqlTestPleaseWork
 
         $drink = $_POST['basketDrinkId'];
 
