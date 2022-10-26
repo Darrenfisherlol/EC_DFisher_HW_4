@@ -67,8 +67,8 @@
                 <td><?=$row["foodName"]?> </td>
             </tr>
             <?php
-            } 
-            else {
+            }
+            } else {
                 echo "0 results";
             }
             $conn->close();
@@ -77,10 +77,6 @@
     
    
 </div>
-
-
-
-
 
 
 <!--Show items that the user can add-->
