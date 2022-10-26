@@ -35,12 +35,6 @@
 
         $foodName = $_POST['basketFoodId'];
 
-
-        $food = "SELECT foodID FROM Food WHERE foodname like '$foodName'";
-
-        $sqlTestPleaseWork = $conn->prepare($food);
-        $sqlTestPleaseWork->execute();
-
         $drink = $_POST['basketDrinkId'];
 
         // prepare and bind
@@ -48,7 +42,7 @@
 
         $saveSql = $conn->prepare($sql);
 
-        $saveSql->bind_param("sii", $name, $sqlTestPleaseWork, $drink);
+        $saveSql->bind_param("sii", $name, $foodName, $drink);
 
         $saveSql->execute();
 
