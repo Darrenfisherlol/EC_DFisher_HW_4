@@ -44,8 +44,8 @@
 
         ?>
 
-            <label for="basketDrinkId" class="form-label">Pick the Food</label>
-            <select class="form-select" aria-label="Select product" id="basketDrinkId" name="basketDrinkId">
+            <label for="basketFoodId" class="form-label">Pick the Food</label>
+            <select class="form-select" aria-label="Select product" id="basketFoodId" name="basketFoodId">
         
         <?php
             $sql = "select * from Food";
