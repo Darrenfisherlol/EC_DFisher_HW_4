@@ -33,9 +33,9 @@
         // GET & POST 
         $name = $_POST['basketOwnerName'];
 
-        $foodName = $_POST['basketFoodId'];
+        $foodName = $_POST['basketDrinkId'];
 
-        $drink = $_POST['basketDrinkId'];
+        $drink = $_POST['basketFoodId'];
 
         // prepare and bind
         $sql = "INSERT INTO Basket (basketOwnerName, basketFoodId, basketDrinkId) VALUES (?, ?, ?)";
