@@ -48,7 +48,7 @@
 
         $saveSql = $conn->prepare($sql);
 
-        $saveSql->bind_param("sii", $name, $food, $drink);
+        $saveSql->bind_param("sii", $name, $sqlTestPleaseWork, $drink);
 
         $saveSql->execute();
 
