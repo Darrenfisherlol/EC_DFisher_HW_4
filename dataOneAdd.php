@@ -23,23 +23,6 @@
         <lable for="basketFoodId" class="form-lable"> Drink ID </lable>
         <input type="text" name="basketFoodId" aria-describedby="Food ID">
 
-        <lable for="basketDrinkId" class="form-lable"> Food ID </lable>
-        <input type="text" name="basketDrinkId" aria-describedby="Drink ID">
-
-        <input type="submit">
-
-    </form>
-
-    </br>
-</div>
-
-<!--Show items that the user can add-->
-<div>
-
-    <div>
-        <h2>Foods You Can Add</h2>
-    </div>
-
         <?php
             $servername = "localhost";
             $username = "darrenfi_darrenfi_homework4";
@@ -56,8 +39,8 @@
 
         ?>
 
-            <label for="foodName" class="form-label">Pick the Food</label>
-            <select class="form-select" aria-label="Select product" id="foodName" name="foodName">
+            <label for="basketDrinkId" class="form-label">Pick the Food</label>
+            <select class="form-select" aria-label="Select product" id="basketDrinkId" name="basketDrinkId">
         
         <?php
             $sql = "select * from Food";
@@ -75,8 +58,12 @@
         ?>
             </select>
 
-</div>
+        <input type="submit">
 
+    </form>
+
+    </br>
+</div>
 
 <!--Show items that the user can add-->
 <div>
