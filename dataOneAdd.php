@@ -63,7 +63,7 @@
             while($row = $result->fetch_assoc()) {
             ?>
             <tr>
-                <td><?=$row["foodId"]?> </td>
+                <td><?=$row["foodID"]?> </td>
                 <td><?=$row["foodName"]?> </td>
             </tr>
             <?php
