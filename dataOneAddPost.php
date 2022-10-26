@@ -33,10 +33,9 @@
         // GET & POST 
         $name = $_POST['basketOwnerName'];
 
-
         $foodName = $_POST['basketFoodId'];
 
-        $food = "SELECT foodID FROM Food WHERE foodname like $foodName";
+        $food = "SELECT foodID FROM Food WHERE foodname like '$foodName'";
 
         $drink = $_POST['basketDrinkId'];
 
