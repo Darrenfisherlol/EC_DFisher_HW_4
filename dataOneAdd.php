@@ -54,28 +54,27 @@
             }
             //echo $iid;
 
-            $sql = "select foodID, foodName from Food";
-            
-            $result = $conn->query($sql);
+        ?>
 
-            if ($result->num_rows > 0) {
-            // output data of each row
+            <label for="foodName" class="form-label">Pick the Food</label>
+            <select class="form-select" aria-label="Select product" id="foodName" name="foodName">
+        
+        <?php
+            $sql = "select * from Food";
+            $result = $conn->query($sql);
             while($row = $result->fetch_assoc()) {
-            ?>
-            <tr>
-                <td><?=$row["foodID"]?> </td>
-                <td><?=$row["foodName"]?> </td>
-            </tr>
-            <?php
-            }
-            } else {
-                echo "0 results";
+
+                ?>
+
+                <option value="<?=$row['foodID']?>"><?=$row['foodName']?></option>
+
+                <?php
             }
             $conn->close();
+           
         ?>
-        
-    
-   
+            </select>
+
 </div>
 
 
