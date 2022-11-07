@@ -31,8 +31,11 @@
       </div>
       <div class="modal-body">
         
+       <p>
+        Test 1
+       
+       </p> 
 
-    <div>
         <form action="dataTwoAddPost.php" method="post">
 
             <lable for="drinkName" class="form-lable"> Drink Name </lable>
@@ -47,9 +50,11 @@
             <input type="submit">
 
         </form>
-    </div>
 
-
+    <p>
+        Test 2
+       
+       </p> 
 
       </div>
       <div class="modal-footer">
