@@ -12,9 +12,6 @@
 
 </br>
 
-$('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
-}) 
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
