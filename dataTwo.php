@@ -28,11 +28,29 @@
         </button>
       </div>
       <div class="modal-body">
-        ...
+
+        <div>
+          <form action="dataTwoAddPost.php" method="post">
+
+            <lable for="drinkName" class="form-lable"> Drink Name </lable>
+            <input type="text" name="drinkName" aria-describedby="Food Name">
+
+            <lable for="drinkCost" class="form-lable"> Drink Cost </lable>
+            <input type="text" name="drinkCost" aria-describedby="5.00">
+
+            <lable for="drinkTemperature" class="form-lable"> Drink Temperature </lable>
+            <input type="text" name="drinkTemperature" aria-describedby="Carb">
+
+            <input type="submit">
+
+          </form>
+
+          </br>
+        </div>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
